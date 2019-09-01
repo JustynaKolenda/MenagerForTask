@@ -8,7 +8,44 @@
 <body>
     <div>
         <div>Dodaj nowe zadanie</div>
+    </br>
     </div>
+    <form>
+        <div>
+            <p>Tytuł:</p> 
+            <input type="text" id="titleTask" placeholder="podaj tytuł zadania">
+        </div> 
+        <div>
+            <p>Opis zadania </p>
+            <textarea id="taskDescription" rows="4" cols="28">
+            </textarea>
+        </div>
+        <div>
+            <p>Ostateczny termin</p>
+            <input type="date" id="dateTask" >
+        </div>
+        <div>
+            <br>
+            <input type="radio" name="type" value="Pilne">Pilne <br>
+            <input type="radio" name="type" value="Normalne"> Normalne <br>
+            <input type="checkbox" value="compare">Połączone z innym <br>
+            <input type="checkbox" value="notAllInfo">Nie ma pełnej informacji<br>
+        </div>
+        <div>
+            <p>Wybierz wykonawce</p>
+            <select id="choseOne">
+                <option value="me">Ja</option>
+                <option value="Damian">Damian</option>
+                <option value="notKnow">Nie ustalono</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <button id="submit" type="submit">Zapisz</button>
+            <button type="reset">Anuluj</button>
+        </div>
+
+    </form>
 
 
 </body>
