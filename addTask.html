@@ -10,7 +10,7 @@
         <div>Dodaj nowe zadanie</div>
     </br>
     </div>
-    <form>
+    <form id="formAdd">
         <div>
             <p>Tytuł:</p> 
             <input type="text" id="titleTask" placeholder="podaj tytuł zadania">
@@ -26,10 +26,10 @@
         </div>
         <div>
             <br>
-            <input type="radio" name="type" value="Pilne">Pilne <br>
-            <input type="radio" name="type" value="Normalne"> Normalne <br>
-            <input type="checkbox" value="compare">Połączone z innym <br>
-            <input type="checkbox" value="notAllInfo">Nie ma pełnej informacji<br>
+            <!-- <input type="radio" name="type" value="Pilne">Pilne <br>
+            <input type="radio" name="type" value="Normalne"> Normalne <br> -->
+            <input type="checkbox" name="type" value="compare">Połączone z innym <br>
+            <input type="checkbox" name="type" value="notAllInfo">Nie ma pełnej informacji<br>
         </div>
         <div>
             <p>Wybierz wykonawce</p>
@@ -42,7 +42,7 @@
         <br>
         <div>
             <button id="submit" type="submit">Zapisz</button>
-            <button type="reset">Anuluj</button>
+            <button id="reset" type="reset">Anuluj</button>
         </div>
 
     </form>

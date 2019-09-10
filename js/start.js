@@ -10,6 +10,6 @@ const listOfTask = document.getElementById('taskList')
 
     listOfTask.addEventListener('click', function() {
         //window.location.replace('listTask.html')
-        window.location.assign("addTask.html")
+        window.location.assign("listTask.html")
     })
 });
