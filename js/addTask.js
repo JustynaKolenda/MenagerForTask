@@ -7,19 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if(task == null) {
             task = [];
         };
-
+       
         const title = document.getElementById('titleTask').value;
         const description = document.getElementById('taskDescription').value;
         const date = document.getElementById('dateTask').value;
         const type = document.getElementsByName('type').value;
         const choseOne = document.getElementById("choseOne").value;
-
-        task.push({title, description, date, type, choseOne});
-        localStorage.setItem('task', JSON.stringify(task));
-
-        clear();
-        window.location.assign("listTask.html");
-
+        
+        if(requaired() && checkDate(date)){
+            task.push({title, description, date, type, choseOne});
+            localStorage.setItem('task', JSON.stringify(task));
+            clear();
+            window.location.assign("listTask.html");
+        }
+      
     });
 
     function clear(){
@@ -30,6 +31,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("choseOne").value = '';
     }
 
+    function requaired(){
+        var req = document.forms["formAdd"]["titleTask"].value;
+        if(req == "") {
+            alert("Uzupełnij pole");
+            return false;
+        }
+        return true;
+    }
+
+    function checkDate(dateFromInput){
+        let today = Date.now();
+        let start = new Date(dateFromInput);
+        console.log(today, start, dateFromInput);
+
+        if(today>start) {
+            alert("Data nie może być starsza od dzisiejszej");
+            return false;
+        } 
+        return true;
+        
+    }
     const discard = document.getElementById('discard');
     discard.addEventListener('click', function() {
         window.location.assign("index.html");

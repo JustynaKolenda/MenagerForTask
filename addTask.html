@@ -13,16 +13,16 @@
     <form id="formAdd">
         <div>
             <p>Tytuł:</p> 
-            <input type="text" id="titleTask" placeholder="podaj tytuł zadania">
+            <input type="text" id="titleTask" max="150" placeholder="podaj tytuł zadania" >
         </div> 
         <div>
             <p>Opis zadania </p>
-            <textarea id="taskDescription" rows="4" cols="28">
+            <textarea id="taskDescription" minlength="10" maxlength="500" rows="4" cols="28">
             </textarea>
         </div>
         <div>
             <p>Ostateczny termin</p>
-            <input type="date" id="dateTask" >
+            <input type="date" id="dateTask" min="2019-09-12" placeholder="dd-mm-rrrr">
         </div>
         <div>
             <br>
