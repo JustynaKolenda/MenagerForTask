@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
         html += '<td>';
         html += el.type;
         html += '</td>';
+        html += '<td>';
+        html += el.choseOne;
+        html += '</td>';
         html += '</tr>';
     });
     document.querySelector('tbody').innerHTML = html;
